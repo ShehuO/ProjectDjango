@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css '  %}">
+    <!-- CSS jone -->
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}
+    ">
+</head>
+
+
+
+<body>
+    {% include "navbar.html" %}
+    {%block content%}
+    {% endblock %}
+    {% include "footer.html" %}
+
+    <!-- JS Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JS jone -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
