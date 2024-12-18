@@ -25,114 +25,28 @@
 <div class="container">
   <h2>Hello</h2>
   <div class="row">
+    {% for item in items %}
     <div class="col-12 col-md-6 col-lg-4 mb-3">
       <div class="card h-100">
-        <img src="{% static 'images/img5.jpg' %}" class="card-img-top h-100" alt="...">
+        <img src="{{item.item_image.url}}" class="card-img-top h-100" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">1-Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.
+          <h5 class="card-title">{{item.item_name}}</h5>
+          <p class="card-text">{{item.item_description}}
           </p>
           <p class="card-text newPara">2-Some quick example text to build on the card title and make up the bulk
             of
             the card's
             content.
           </p>
-          <button class="btn btn-primary showHide">Go somewhere</button>
+          <a href="{% url 'detailitem' item.pk %}" class="btn btn-primary showHide">Go somewhere</button>
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-3">
-      <div class="card h-100">
-        <img src="images/img2.jpg" class="card-img-top h-100" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">1-Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.
-          </p>
-          <p class="card-text newPara">2-Some quick example text to build on the card title and make up the bulk
-            of
-            the card's
-            content.
-          </p>
-          <button class="btn btn-primary showHide">Go somewhere</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-3">
-      <div class="card h-100">
-        <img src="images/img3.jpg" class="card-img-top h-100" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">1-Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.
-          </p>
-          <p class="card-text newPara">2-Some quick example text to build on the card title and make up the bulk
-            of
-            the card's
-            content.
-          </p>
-          <button class="btn btn-primary showHide">Go somewhere</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-3">
-      <div class="card h-100">
-        <img src="images/img4.jpg" class="card-img-top h-100" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">1-Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.
-          </p>
-          <p class="card-text newPara">2-Some quick example text to build on the card title and make up the bulk
-            of
-            the card's
-            content.
-          </p>
-          <button class="btn btn-primary showHide">Go somewhere</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-3">
-      <div class="card h-100">
-        <img src="images/img5.jpg" class="card-img-top h-100" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">1-Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.
-          </p>
-          <p class="card-text newPara">2-Some quick example text to build on the card title and make up the bulk
-            of
-            the card's
-            content.
-          </p>
-          <button class="btn btn-primary showHide">Go somewhere</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-3">
-      <div class="card h-100">
-        <img src="images/img6.jpg" class="card-img-top h-100" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">1-Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.
-          </p>
-          <p class="card-text newPara">2-Some quick example text to build on the card title and make up the bulk
-            of
-            the card's
-            content.
-          </p>
-          <button class="btn btn-primary showHide">Go somewhere</button>
-        </div>
-      </div>
-    </div>
+
+    {% endfor %}
+
+
+
   </div>
 </div>
 <!-- fund sesion grid -->
@@ -140,7 +54,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-7">
-      <img src="images/img2.jpg" alt="" class="img-fluid">
+      <img src="{{item.item_image.url}}" alt="" class="img-fluid">
     </div>
     <div class="col-12 col-md-6 col-lg-5">
       <h1>About Us</h1>
@@ -148,7 +62,7 @@
         non
         sunt a eaque similique illum omnis accusantium odit repellendus, autem consequuntur cupiditate molestiae.
         Dolores, et.</p>
-      <a href="about.html">Find more</a>
+      <a href="">Find more</a>
     </div>
 
   </div>

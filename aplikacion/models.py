@@ -5,3 +5,4 @@ class Item(models.Model):
     item_name= models.CharField(max_length=100,null=True, blank=True)
     item_description = models.TextField(max_length=1000,null=True, blank=True)
     item_image = models.ImageField(upload_to="item/",null=True, blank=True)
+    item_price = models.DecimalField(max_digits=5,decimal_places=2,null=True,blank=True)

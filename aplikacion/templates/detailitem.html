@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-md-6">
+        <h1> {{itemDetail.item_name}}</h1>
+        <p>{{itemDetail.item_description}}</p>
+        <p>{{itemDetail.itemprice}} $</p>
+
+    </div>
+    <div class="col-12 col-md-6">
+        <img src="{{itemDetail.item_image.url}}" alt="{{itemDetail.item_name}}" class="img-fluid">
+    </div>
+</div>
+{% endblock %}
